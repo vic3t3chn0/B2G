@@ -28,7 +28,7 @@ case `uname` in
 	exit -1
 esac
 
-GITREPO=${GITREPO:-"git://github.com/mozilla-b2g/b2g-manifest"}
+GITREPO=${GITREPO:-"https://github.com/vic3t3chn0/b2g-manifest"}
 BRANCH=${BRANCH:-master}
 
 GIT_TEMP_REPO="tmp_manifest_repo"
