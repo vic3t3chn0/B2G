@@ -96,6 +96,11 @@ case "$1" in
 	repo_sync emulator
 	;;
 
+"m6")
+	echo DEVICE=m6 >> .tmp-config &&
+	repo_sync $1
+;;
+
 *)
 	echo Usage: $0 \(device name\)
 	echo
@@ -109,6 +114,7 @@ case "$1" in
 	echo - pandaboard
 	echo - emulator
 	echo - emulator-x86
+	echo - m6
 	exit -1
 	;;
 esac
