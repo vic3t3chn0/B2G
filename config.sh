@@ -105,12 +105,16 @@ repo_sync $1
 	echo DEVICE=m6 >> .tmp-config &&
 	repo_sync $1
 ;;
-
+"wave") 
+	echo DEVICE=wave >> .tmp-config &&
+	repo_sync $1
+	;;
 *)
 	echo Usage: $0 \(device name\)
 	echo
 	echo Valid devices to configure are:
 	echo - galaxy-s2
+	echo - galaxy-s3
 	echo - galaxy-nexus
 	echo - nexus-s
 	echo - nexus-s-4g
@@ -120,6 +124,7 @@ repo_sync $1
 	echo - emulator
 	echo - emulator-x86
 	echo - m6
+	echo - wave
 	exit -1
 	;;
 esac
