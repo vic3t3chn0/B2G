@@ -54,6 +54,11 @@ case "$1" in
 	repo_sync $1
 	;;
 
+"galaxy-s3")
+echo DEVICE=galaxys3 >> .tmp-config &&
+repo_sync $1
+;;
+
 "galaxy-nexus")
 	echo DEVICE=maguro >> .tmp-config &&
 	repo_sync $1
