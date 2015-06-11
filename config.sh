@@ -89,6 +89,11 @@ repo_sync $1
 	repo_sync $1
 	;;
 
+"archos80-gen9")
+	echo DEVICE=archos80 >> .tmp-config &&
+	repo_sync $1
+	;;
+
 "emulator")
 	echo DEVICE=generic >> .tmp-config &&
 	echo LUNCH=full-eng >> .tmp-config &&
@@ -109,6 +114,12 @@ repo_sync $1
 	echo DEVICE=wave >> .tmp-config &&
 	repo_sync $1
 	;;
+"togari") 
+	echo DEVICE=togari >> .tmp-config &&
+	eccho LUNCH=aosp_togari-eng >> .tmp-config &&
+	repo_sync togari
+	;;
+
 *)
 	echo Usage: $0 \(device name\)
 	echo
@@ -121,10 +132,12 @@ repo_sync $1
 	echo - otoro
 	echo - unagi
 	echo - pandaboard
+	echo - archos80
 	echo - emulator
 	echo - emulator-x86
 	echo - m6
 	echo - wave
+	echo - togari
 	exit -1
 	;;
 esac
